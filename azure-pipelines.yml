@@ -18,9 +18,12 @@ steps:
 - script: |
     npm install
     npm run build
+  displayName: 'npm install and build'
+- script: |
     echo ls -la ./s/
     echo $PWD
     echo ls -la
+    ls -1 $AGENT_WORKFOLDER
     echo $(Build.ArtifactStagingDirectory)
   displayName: 'npm install and build'
 - task: PublishPipelineArtifact@0
