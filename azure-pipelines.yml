@@ -22,9 +22,10 @@ steps:
 - script: |
     echo list s 
     ls -la ./s/
-    echo $PWD
+    echo PWD: $PWD
     ls -la
-    echo list agent folder
+    echo list agent folder $AGENT_WORKFOLDER
+    ls -l $AGENT_WORKFOLDER
     ls -1 $AGENT_WORKFOLDER
     echo $(Build.ArtifactStagingDirectory)
   displayName: 'Output useful stuff'
