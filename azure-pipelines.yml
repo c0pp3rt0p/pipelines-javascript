@@ -21,3 +21,7 @@ steps:
     echo $PWD
     echo ls -la
   displayName: 'npm install and build'
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'drop'
+    targetPath: './.'
