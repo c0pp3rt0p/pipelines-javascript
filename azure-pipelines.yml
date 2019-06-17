@@ -18,6 +18,7 @@ steps:
 - script: |
     npm install
     npm run build
+    echo ls -la ./s/
     echo $PWD
     echo ls -la
     echo $(Build.ArtifactStagingDirectory)
