@@ -20,12 +20,14 @@ steps:
     npm run build
   displayName: 'npm install and build'
 - script: |
-    echo ls -la ./s/
+    echo list s 
+    ls -la ./s/
     echo $PWD
-    echo ls -la
+    ls -la
+    echo list agent folder
     ls -1 $AGENT_WORKFOLDER
     echo $(Build.ArtifactStagingDirectory)
-  displayName: 'npm install and build'
+  displayName: 'Output useful stuff'
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'drop'
